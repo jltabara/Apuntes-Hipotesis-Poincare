@@ -3,7 +3,7 @@
 %%%%%%%%%%%%%%%%%%%%%%Paquetes
 \usepackage[spanish]{babel}  
 \usepackage{indentfirst} %%%%%%%%%%%%%%%%Crear un indent al principio
-\usepackage[latin1]{inputenc}%%%%%%%%%%%%ñ y acentos
+\usepackage[utf8]{inputenc}%%%%%%%%%%%%Ã± y acentos
 \usepackage{amstext}%%%%%%%%
 \usepackage{amsfonts}%%%%%%%
 \usepackage{amssymb}%%%%%%%% AMSLaTeX
@@ -24,9 +24,9 @@
 
 %%%%%%%%%%%%%%%%%%%%%%Teoremas
 \newtheorem{teo}{Teorema}[section]%%%%%%%%% Teorema
-\newtheorem{defi}{Definición}[section]%%%%%%%% Definicion
+\newtheorem{defi}{DefiniciÃ³n}[section]%%%%%%%% Definicion
 \newtheorem{lema}[teo]{Lema}%%%%%%%%%%%%% Lema
-\newtheorem{propo}[teo]{Proposición}%%%%%%%% Proposicion
+\newtheorem{propo}[teo]{ProposiciÃ³n}%%%%%%%% Proposicion
 \newtheorem{cor}[teo]{Corolario}%%%%%%%%%%%Corolario
 \newtheorem{pro1}{\small Problema}%[chapter]%%%%%%%%%Problema
 \newenvironment{pro}{\begin{pro1} \sf \small} {\end{pro1}}
@@ -37,7 +37,7 @@
 
 
 %%%%%%%%%%%%%%%%%%%Comandos
-\newcommand{\dem}{\noindent\textbf{Demostración. }\vspace{0.3 cm}}%%Demostracion
+\newcommand{\dem}{\noindent\textbf{DemostraciÃ³n. }\vspace{0.3 cm}}%%Demostracion
 \newcommand{\R}{\mathbb{R}}%%%%%%%%%%%%Numeros reales
 \newcommand{\F}{\mathbb{F}}%%%%%%%%%%%%Cuerpo
 \newcommand{\C}{\mathbb{C}}%%%%%%%%%%%%Numeros complejos
@@ -81,7 +81,7 @@
 \DeclareMathOperator{\Dif}{Dif}%%%%%%%%%%Diferenciales
 \DeclareMathOperator{\sop}{sop}%%%%%%%%%Soporte
 \DeclareMathOperator{\distancia}{d}%%%%%%%%Distancia
-\DeclareMathOperator{\sen}{sen}%%%%%%%%%%Seno español
+\DeclareMathOperator{\sen}{sen}%%%%%%%%%%Seno espaÃ±ol
 \DeclareMathOperator{\Der}{Der}%%%%%%%%%%Derivaciones
 \DeclareMathOperator{\rang}{rang}%%%%%%%%Rango
 \DeclareMathOperator{\Hom}{Hom}%%%%%%Homomorfismos
@@ -94,14 +94,14 @@
 \DeclareMathOperator{\Apli}{Apli}%%%%%%Aplicaciones
 \DeclareMathOperator{\Bil}{Bil}%%%%%Bilineales
 \DeclareMathOperator{\Spec}{Spec}%%%%Espectro
-\DeclareMathOperator{\Ob}{Ob}  %%% Objetos de una categoría
-\DeclareMathOperator{\Tor}{Tor}%%%%%Torsion de una conexión lineal
+\DeclareMathOperator{\Ob}{Ob}  %%% Objetos de una categorÃ­a
+\DeclareMathOperator{\Tor}{Tor}%%%%%Torsion de una conexiÃ³n lineal
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
 %%%%%%%%%%%%%%%%%
-\title{Hipótesis de Poincaré}
-\author{José Luis Tábara}
+\title{HipÃ³tesis de PoincarÃ©}
+\author{JosÃ© Luis TÃ¡bara}
 \date{jltabara@gmail.com}
 %%%%%%%%%%%%%%%%%
 
@@ -122,32 +122,30 @@
 
 \newpage
 
+\section*{IntroducciÃ³n}\setcounter{page}{1}
+\addcontentsline{toc}{section}{IntroducciÃ³n}
 
+ El problema fundamental de la topologÃ­a es el de la clasificaciÃ³n: dar criterios necesarios y suficientes para que dos espacios sean homeomorfos. Dos espacios topolÃ³gicos  homeomorfos son, bajo el punto de vista topolÃ³gico, exactamente iguales.   El programa asÃ­ descrito es enormemente ambicioso y totalmente intratable, al menos en el momento actual. Aunque no tenemos propiedades  ni invariantes adecuados para saber si dos espacios son homeomorfos, al menos tenemos bastantes criterios para afirmar  que dos espacios no pueden equivalentes. Por ejemplo, si un espacio es compacto, no puede ser homeomorfo a otro espacio que no lo sea, debido a que la compacidad es una propiedad que se conserva por aplicaciones continuas. Lo mismo se puede decir de prÃ¡cticamente todos los conceptos que se estudian en la rama de las matemÃ¡ticas conocida como  TopologÃ­a General.  
 
-\section*{Introducción}\setcounter{page}{1}
-\addcontentsline{toc}{section}{Introducción}
-
- El problema fundamental de la topología es el de la clasificación: dar criterios necesarios y suficientes para que dos espacios sean homeomorfos. Dos espacios topológicos  homeomorfos son, bajo el punto de vista topológico, exactamente iguales.   El programa así descrito es enormemente ambicioso y totalmente intratable, al menos en el momento actual. Aunque no tenemos propiedades  ni invariantes adecuados para saber si dos espacios son homeomorfos, al menos tenemos bastantes criterios para afirmar  que dos espacios no pueden equivalentes. Por ejemplo, si un espacio es compacto, no puede ser homeomorfo a otro espacio que no lo sea, debido a que la compacidad es una propiedad que se conserva por aplicaciones continuas. Lo mismo se puede decir de prácticamente todos los conceptos que se estudian en la rama de las matemáticas conocida como  Topología General.  
-
-Como la clasificación completa de los espacios topológicos es inviable, debemos restringirnos a una clase más ``selecta'' de espacios: estudiaremos únicamente las variedades topológicas de dimensión finita. Estos espacios se pueden construir ``pegando'' abiertos de un espacio euclídeo.  Si los abiertos considerados son de dimensión $n$, decimos que la variedad es de dimensión~$n$.  En algunas variedades puede ser necesario recurrir a infinitos abiertos o a abiertos con ``volumen'' infinito. Pero incluso la clasificación completa de las variedades no parece posible que sea realizada en la actualidad.  Debemos imponer algún criterio que implique de alguna manera la finitud.  Lo más natural es considerar las variedades compactas. Estas se obtienen pegando un número finito de abiertos, cada uno de los cuales tiene un volumen finito. Además se puede suponer que las variedades son conexas, puesto que las componentes conexas de cualquier variedad se pueden estudiar por separado.  Proponemos entonces el siguiente problema:
+Como la clasificaciÃ³n completa de los espacios topolÃ³gicos es inviable, debemos restringirnos a una clase mÃ¡s ``selecta'' de espacios: estudiaremos Ãºnicamente las variedades topolÃ³gicas de dimensiÃ³n finita. Estos espacios se pueden construir ``pegando'' abiertos de un espacio euclÃ­deo.  Si los abiertos considerados son de dimensiÃ³n $n$, decimos que la variedad es de dimensiÃ³n~$n$.  En algunas variedades puede ser necesario recurrir a infinitos abiertos o a abiertos con ``volumen'' infinito. Pero incluso la clasificaciÃ³n completa de las variedades no parece posible que sea realizada en la actualidad.  Debemos imponer algÃºn criterio que implique de alguna manera la finitud.  Lo mÃ¡s natural es considerar las variedades compactas. Estas se obtienen pegando un nÃºmero finito de abiertos, cada uno de los cuales tiene un volumen finito. AdemÃ¡s se puede suponer que las variedades son conexas, puesto que las componentes conexas de cualquier variedad se pueden estudiar por separado.  Proponemos entonces el siguiente problema:
 
 \begin{quote} \it
 
-Clasificar todas las variedades compactas y conexas de dimensión finita
+Clasificar todas las variedades compactas y conexas de dimensiÃ³n finita
 
 \end{quote}
 
-El caso de la dimensión cero es trivial.  La única variedad es el punto.  El caso unidimensional también es sencillo: toda variedad conexa y compacta de dimensión 1 es homeomorfa al círculo.  Las cosas empiezan a ponerse interesantes en dimensión~2.  Este problema es equivalente al  estudio de las superficies finitas sin bordes.  En el siglo {\sc xix} se obtuvo la clasificación completa.
+El caso de la dimensiÃ³n cero es trivial.  La Ãºnica variedad es el punto.  El caso unidimensional tambiÃ©n es sencillo: toda variedad conexa y compacta de dimensiÃ³n 1 es homeomorfa al cÃ­rculo.  Las cosas empiezan a ponerse interesantes en dimensiÃ³n~2.  Este problema es equivalente al  estudio de las superficies finitas sin bordes.  En el siglo {\sc xix} se obtuvo la clasificaciÃ³n completa.
 
 \smallskip
 
 {\bf Teorema.} \begin{it}
-Toda superficie compacta tiene un número natural asociado, llamado {\sf género}.  Dos superficies son homeomorfas si y solo si tienen el mismo género.
+Toda superficie compacta tiene un nÃºmero natural asociado, llamado {\sf gÃ©nero}.  Dos superficies son homeomorfas si y solo si tienen el mismo gÃ©nero.
 \end{it}
 
 \smallskip
 
-La superficie más sencilla es la esfera, que tiene género cero.  El toro tiene género 1 y la figura
+La superficie mÃ¡s sencilla es la esfera, que tiene gÃ©nero cero.  El toro tiene gÃ©nero 1 y la figura
 
 \begin{figure}[htbp]
 	\centering
@@ -157,11 +155,11 @@ La superficie más sencilla es la esfera, que tiene género cero.  El toro tiene g
 \end{figure}
 
 
-\noindent tiene género dos. En general una superficie de género $n$ es una figura similar pero con $n$ agujeros.  Intuitivamente el género mide el número de agujeros que presenta la superficie.  
+\noindent tiene gÃ©nero dos. En general una superficie de gÃ©nero $n$ es una figura similar pero con $n$ agujeros.  Intuitivamente el gÃ©nero mide el nÃºmero de agujeros que presenta la superficie.  
 
 \smallskip
 
-La clasificación completa de las variedades tridimensionales se conoce como ``programa de Thurston''.  Todo el programa de clasificación, que posteriormente comentaremos,  se apoya en una piedra angular, que es la {\it conjetura de Poincaré}.  Expresada en un lenguaje vulgar dice:
+La clasificaciÃ³n completa de las variedades tridimensionales se conoce como ``programa de Thurston''.  Todo el programa de clasificaciÃ³n, que posteriormente comentaremos,  se apoya en una piedra angular, que es la {\it conjetura de PoincarÃ©}.  Expresada en un lenguaje vulgar dice:
 
 \begin{quote} \it 
 
@@ -171,11 +169,11 @@ Si una variedad tridimensional es ``sencilla'' entonces es (equivalente) a la  e
 
 \newpage
 
-\section*{Homología}
-\addcontentsline{toc}{section}{Homología}
+\section*{HomologÃ­a}
+\addcontentsline{toc}{section}{HomologÃ­a}
 
-Anteriormente hemos hablado de variedad ``sencilla''.    ¿Pero que entendemos por sencilla?  Para situarnos haremos una analogía con el caso bidimensional.  Una variedad sencilla será para nosotros una variedad sin agujeros.  Debemos estudiar entonces una teoría que de alguna manera sea capaz de estudiar los agujeros $n$-dimensionales.  Esa fué la idea de Poincaré.  La generalización que se le ocurrió a Poincaré fue la teoría de la homología. 
-La idea que subyace en la teoría de la homología es el estudio de las subvariedades y sus fronteras.  Por ejemplo, en dimensión 2, si trazamos un círculo arbitrario sobre una esfera y realizamos un corte a lo largo de dicho círculo, la variedad se divide en dos partes disconexas.  El círculo es justamente el borde de cada una de las componentes conexas.  Sin embargo en un toro existen círculos tales que al cortar a traves de ellos la variedad no se desconecta.  En el toro existen círculos que no son la frontera de ninguna variedad.
+Anteriormente hemos hablado de variedad ``sencilla''.    Â¿Pero que entendemos por sencilla?  Para situarnos haremos una analogÃ­a con el caso bidimensional.  Una variedad sencilla serÃ¡ para nosotros una variedad sin agujeros.  Debemos estudiar entonces una teorÃ­a que de alguna manera sea capaz de estudiar los agujeros $n$-dimensionales.  Esa fuÃ© la idea de PoincarÃ©.  La generalizaciÃ³n que se le ocurriÃ³ a PoincarÃ© fue la teorÃ­a de la homologÃ­a. 
+La idea que subyace en la teorÃ­a de la homologÃ­a es el estudio de las subvariedades y sus fronteras.  Por ejemplo, en dimensiÃ³n 2, si trazamos un cÃ­rculo arbitrario sobre una esfera y realizamos un corte a lo largo de dicho cÃ­rculo, la variedad se divide en dos partes disconexas.  El cÃ­rculo es justamente el borde de cada una de las componentes conexas.  Sin embargo en un toro existen cÃ­rculos tales que al cortar a traves de ellos la variedad no se desconecta.  En el toro existen cÃ­rculos que no son la frontera de ninguna variedad.
 
 \begin{figure}[htbp]
 	\centering
@@ -183,25 +181,23 @@ La idea que subyace en la teoría de la homología es el estudio de las subvarieda
 	\end{figure}
 
 
-   En una serie de trabajos presentados a partir de 1895  Poincaré da inicio a la rama de las matemáticas conocida como Topología Algebraica. Para poder realizar cálculos, Poincaré estudia únicamente los poliedros. Define el concepto de homología de los ``poliedros'' en cualquier dimensión.  También estudia la homología de las superficies.  Para ello triangula la superficie y la deforma para convertirla en un poliedro. Las conclusiones que obtiene son independientes de la triangulación tomada y  dependen únicamente de la superficie.  Ese mismo procedimiento de triangulación puede realizarse en dimensiones superiores.   Con ello es capaz de estudiar la homología de la esfera tridimensional, que el consideraba que era la variedad tridimensional más sencilla.  Ello le lleva a formular, en 1900, una conjetura.
+   En una serie de trabajos presentados a partir de 1895  PoincarÃ© da inicio a la rama de las matemÃ¡ticas conocida como TopologÃ­a Algebraica. Para poder realizar cÃ¡lculos, PoincarÃ© estudia Ãºnicamente los poliedros. Define el concepto de homologÃ­a de los ``poliedros'' en cualquier dimensiÃ³n.  TambiÃ©n estudia la homologÃ­a de las superficies.  Para ello triangula la superficie y la deforma para convertirla en un poliedro. Las conclusiones que obtiene son independientes de la triangulaciÃ³n tomada y  dependen Ãºnicamente de la superficie.  Ese mismo procedimiento de triangulaciÃ³n puede realizarse en dimensiones superiores.   Con ello es capaz de estudiar la homologÃ­a de la esfera tridimensional, que el consideraba que era la variedad tridimensional mÃ¡s sencilla.  Ello le lleva a formular, en 1900, una conjetura.
 
 \begin{quote} \it
 
-Si una variedad tridimensional tiene la misma homología que la esfera $S^3$ entonces es homeomorfa a  dicha esfera.
+Si una variedad tridimensional tiene la misma homologÃ­a que la esfera $S^3$ entonces es homeomorfa a  dicha esfera.
 
 \end{quote}
 
-Durante cuatro años creyó Poincaré que su conjetura era correcta, pero en 1904 encontró un contraejemplo. Construyó la variedad $\mathrm{SO}(3)/\mathrm{I}_{60}$ (donde $I_{60}$ es el grupo de isometrías de un icosaedro) cuya homología era igual a la de la esfera y sin embargo demostró que no eran homeomorfas.  Para la demostración de este hecho introdujo conceptos nuevos.  El principal era la homotopía de caminos, que es otra forma de estudiar los agujeros en dimensiones superiores.
-
-
+Durante cuatro aÃ±os creyÃ³ PoincarÃ© que su conjetura era correcta, pero en 1904 encontrÃ³ un contraejemplo. ConstruyÃ³ la variedad $\mathrm{SO}(3)/\mathrm{I}_{60}$ (donde $I_{60}$ es el grupo de isometrÃ­as de un icosaedro) cuya homologÃ­a era igual a la de la esfera y sin embargo demostrÃ³ que no eran homeomorfas.  Para la demostraciÃ³n de este hecho introdujo conceptos nuevos.  El principal era la homotopÃ­a de caminos, que es otra forma de estudiar los agujeros en dimensiones superiores.
 
 
 \newpage
 
-\section*{Homotopía}
-\addcontentsline{toc}{section}{Homotopía}
+\section*{HomotopÃ­a}
+\addcontentsline{toc}{section}{HomotopÃ­a}
 
-Un {\it camino} en una variedad es una aplicación continua de un intervalo cerrado, pongamos $[0,1]$, en la variedad. Si denotamos por $c$ al camino, decimos que $c(0)$ es el origen del camino y que $c(1)$ es el final. 
+Un {\it camino} en una variedad es una aplicaciÃ³n continua de un intervalo cerrado, pongamos $[0,1]$, en la variedad. Si denotamos por $c$ al camino, decimos que $c(0)$ es el origen del camino y que $c(1)$ es el final. 
 
 \begin{figure}[htbp]
 	\centering
@@ -211,10 +207,10 @@ Un {\it camino} en una variedad es una aplicación continua de un intervalo cerra
 \end{figure}
 
 
- En el caso particular de que el origen coincida con el final decimos que es un {\it camino cerrado} o {\it lazo}.  Consideremos ahora el conjunto de todos los lazos cuyo origen y final es un punto $p$ de la variedad.  Dados dos lazos, se puede hablar de su composición: recorremos primeramente uno y después recorremos el otro.  De esta manera obtenemos una aplicación del intervalo $[0,2]$ en la variedad.  Si hacemos que la {\it velocidad} a la que se recorren los caminos sea el doble, obtenemos un lazo definido en el intervalo unidad.  De este modo se define una operación interna en el conjunto de lazos con origen y final en~$p$.  Dado un camino $c$, llamamos inverso de $c$ al camino recorrido en sentido contrario.  La aplicación constante del intervalo unitario en $p$ se denomina camino neutro. 
+ En el caso particular de que el origen coincida con el final decimos que es un {\it camino cerrado} o {\it lazo}.  Consideremos ahora el conjunto de todos los lazos cuyo origen y final es un punto $p$ de la variedad.  Dados dos lazos, se puede hablar de su composiciÃ³n: recorremos primeramente uno y despuÃ©s recorremos el otro.  De esta manera obtenemos una aplicaciÃ³n del intervalo $[0,2]$ en la variedad.  Si hacemos que la {\it velocidad} a la que se recorren los caminos sea el doble, obtenemos un lazo definido en el intervalo unidad.  De este modo se define una operaciÃ³n interna en el conjunto de lazos con origen y final en~$p$.  Dado un camino $c$, llamamos inverso de $c$ al camino recorrido en sentido contrario.  La aplicaciÃ³n constante del intervalo unitario en $p$ se denomina camino neutro. 
 
 
- Estas definiciones pueden inducir a error, pues el conjunto de lazos con este producto no es un grupo.  Para conseguir introducir una estructura de grupo en este conjunto debemos definir una relación de equivalencia: decimos que dos caminos son equivalentes u homotópicos si se pueden deformar de manera continua uno en el otro. 
+ Estas definiciones pueden inducir a error, pues el conjunto de lazos con este producto no es un grupo.  Para conseguir introducir una estructura de grupo en este conjunto debemos definir una relaciÃ³n de equivalencia: decimos que dos caminos son equivalentes u homotÃ³picos si se pueden deformar de manera continua uno en el otro. 
  
  
 \begin{figure}[htbp]
@@ -223,17 +219,17 @@ Un {\it camino} en una variedad es una aplicación continua de un intervalo cerra
 	\label{fig:homotopiacaminosconextremos}
 \end{figure}
 
-  El conjunto de clases de equivalencia de lazos con la composición de caminos inducida es ya un grupo.  Lo denominamos {\it grupo fundamental} o grupo de Poincaré de la variedad.  Si tomamos otro punto y la variedad es conexa por arcos (las variedades conexas lo son) el grupo obtenido es isomorfo.  En definitiva, el grupo fundamental no depende del punto base que hemos utilizado en la construcción. Además es sencillo demostrar que dos variedades homeomorfas tienen grupos fundamentales isomorfos.   Precisamente Poincaré demostró que $S^3$ y $\mathrm{SO}(3)/\mathrm{I}_{60}$ no podían ser equivalentes dado que el grupo de la esfera tenía un único elemento y el de la otra variedad tenía 120 elementos.
+  El conjunto de clases de equivalencia de lazos con la composiciÃ³n de caminos inducida es ya un grupo.  Lo denominamos {\it grupo fundamental} o grupo de PoincarÃ© de la variedad.  Si tomamos otro punto y la variedad es conexa por arcos (las variedades conexas lo son) el grupo obtenido es isomorfo.  En definitiva, el grupo fundamental no depende del punto base que hemos utilizado en la construcciÃ³n. AdemÃ¡s es sencillo demostrar que dos variedades homeomorfas tienen grupos fundamentales isomorfos.   Precisamente PoincarÃ© demostrÃ³ que $S^3$ y $\mathrm{SO}(3)/\mathrm{I}_{60}$ no podÃ­an ser equivalentes dado que el grupo de la esfera tenÃ­a un Ãºnico elemento y el de la otra variedad tenÃ­a 120 elementos.
  
-  El caso más simple es aquel en que el grupo es trivial.  Decimos que una variedad es {\it simplemente conexa} si su grupo fundamental es trivial. Ello equivale a afirmar que todo lazo se contrae a un punto. Resulta que en dos dimensiones, la esfera es la única variedad simplemente conexa.  En la figura 
+  El caso mÃ¡s simple es aquel en que el grupo es trivial.  Decimos que una variedad es {\it simplemente conexa} si su grupo fundamental es trivial. Ello equivale a afirmar que todo lazo se contrae a un punto. Resulta que en dos dimensiones, la esfera es la Ãºnica variedad simplemente conexa.  En la figura 
 \begin{figure}[h]
 	\centering
 		\includegraphics[width=0.50\textwidth]{imagenes/toro.jpg}
 	\label{fig:toro}
 \end{figure}
-se observan dos lazos en un toro que no se pueden deformar a punto. Ejemplos análogos se tienen en otras superficies de género superior.  En cierto sentido, un grupo de  homotopía no trivial implica la existen de agujeros.
+se observan dos lazos en un toro que no se pueden deformar a punto. Ejemplos anÃ¡logos se tienen en otras superficies de gÃ©nero superior.  En cierto sentido, un grupo de  homotopÃ­a no trivial implica la existen de agujeros.
 
-Hemos introducido los conceptos necesarios para formular, en términos modernos, la conjetura de Poincaré.
+Hemos introducido los conceptos necesarios para formular, en tÃ©rminos modernos, la conjetura de PoincarÃ©.
 
 \begin{quote} \it
 
@@ -241,7 +237,7 @@ Si una variedad tridimensional tiene un grupo fundamental trivial entonces es ho
 
 \end{quote}
 
-Esta reflexión la hizo Poincaré y  añadió ``{\it mais cette question nous entraînerait trop loin'' (``pero este tema nos llevaría demasiado lejos}''). Naturalmente Poincaré no se podía imaginar que pasarían casi cien años hasta obtener la demostración.
+Esta reflexiÃ³n la hizo PoincarÃ© y  aÃ±adiÃ³ ``{\it mais cette question nous entraÃ®nerait trop loin'' (``pero este tema nos llevarÃ­a demasiado lejos}''). Naturalmente PoincarÃ© no se podÃ­a imaginar que pasarÃ­an casi cien aÃ±os hasta obtener la demostraciÃ³n.
 
 \newpage
 
@@ -249,81 +245,69 @@ Esta reflexión la hizo Poincaré y  añadió ``{\it mais cette question nous entraî
 \addcontentsline{toc}{section}{Dimensiones superiores}
 
 
-Aunque Poincaré formuló su conjetura para las variedades de dimensión 3, el mismo problema se puede plantear para cualquier dimensión. Pero ya en dimensión 4 tenemos la variedad $S^2\! \times \!S^2$, que es simplemente conexa y no es homeomorfa a la esfera $S^4$ (la homología de ambas no coincide).  Si queremos realizar un estudio análogo en dimensiones superiores debemos generalizar la afirmación de Poincaré.  La idea que subyace en la conjetura de Poincaré es que una condición relativamente debil, la homotopía, implica una condición más fuerte, que es el homeomorfismo.  Debemos clarificar que significa que dos variedades sean homotópicamente equivalentes.
+Aunque PoincarÃ© formulÃ³ su conjetura para las variedades de dimensiÃ³n 3, el mismo problema se puede plantear para cualquier dimensiÃ³n. Pero ya en dimensiÃ³n 4 tenemos la variedad $S^2\! \times \!S^2$, que es simplemente conexa y no es homeomorfa a la esfera $S^4$ (la homologÃ­a de ambas no coincide).  Si queremos realizar un estudio anÃ¡logo en dimensiones superiores debemos generalizar la afirmaciÃ³n de PoincarÃ©.  La idea que subyace en la conjetura de PoincarÃ© es que una condiciÃ³n relativamente debil, la homotopÃ­a, implica una condiciÃ³n mÃ¡s fuerte, que es el homeomorfismo.  Debemos clarificar que significa que dos variedades sean homotÃ³picamente equivalentes.
 
 
 \smallskip
 
-{\bf Definición.} \begin{it}
-Dadas dos variedades de la misma dimensión $X$ e $Y$, decimos que son homotópicamente equivalentes si existen aplicaciones $f: X \rightarrow Y$ y $g: Y \rightarrow X$ tales que $fg$ y $gf$ sean homotópicamente  equivalentes a la identidad.
+{\bf DefiniciÃ³n.} \begin{it}
+Dadas dos variedades de la misma dimensiÃ³n $X$ e $Y$, decimos que son homotÃ³picamente equivalentes si existen aplicaciones $f: X \rightarrow Y$ y $g: Y \rightarrow X$ tales que $fg$ y $gf$ sean homotÃ³picamente  equivalentes a la identidad.
 \end{it}
 
 \smallskip
 
-En particular, las variedades que son  homotópicamente equivalentes a un punto se dice que son {\it contráctiles}.
+En particular, las variedades que son  homotÃ³picamente equivalentes a un punto se dice que son {\it contrÃ¡ctiles}.
 
 
-La conjetura de Poincaré en dimensiónes superiores dice:
+La conjetura de PoincarÃ© en dimensiÃ³nes superiores dice:
 
 \begin{quote}\it
 
-Si una variedad de dimensión $n$ es homotópicamente equivalente a la esfera $S^n$, entonces ambas variedades son homeomorfas.
+Si una variedad de dimensiÃ³n $n$ es homotÃ³picamente equivalente a la esfera $S^n$, entonces ambas variedades son homeomorfas.
 
 \end{quote}
 
-El estudio de este resultado presenta diversos problemas.  Uno de los principales es que los invariantes más destacados de las variedades, los grupos de homología y los grupos de homotopía, no son solamente invariantes por homeomorfismos, sino que también son invariantes por homotopía. Si queremos distinguir variedades que sean homotópicamente equivalentes, pero no homeomorfas, debemos introducir nuevos invariantes. A pesar de las dificultades se fue derrotando paulatinamente a la conjetura. 
+El estudio de este resultado presenta diversos problemas.  Uno de los principales es que los invariantes mÃ¡s destacados de las variedades, los grupos de homologÃ­a y los grupos de homotopÃ­a, no son solamente invariantes por homeomorfismos, sino que tambiÃ©n son invariantes por homotopÃ­a. Si queremos distinguir variedades que sean homotÃ³picamente equivalentes, pero no homeomorfas, debemos introducir nuevos invariantes. A pesar de las dificultades se fue derrotando paulatinamente a la conjetura. 
 
 
-En 1960 Smale demuestra la conjetura  en dimensión  igual o superior a 5. En realidad Smale no demostró la conjetura en la categoría de la variedades topológicas sino en la de variedades diferenciables, pero esos son detalles técnicos que en este momento carecen de importancia. Tan importante se consideró su trabajo que recibió por él  la medalla Fields.  Y no es el único topólogo que ha recibido tal honor por resultados directamente relacionados con la conjetura de Poincaré. 
+En 1960 Smale demuestra la conjetura  en dimensiÃ³n  igual o superior a 5. En realidad Smale no demostrÃ³ la conjetura en la categorÃ­a de la variedades topolÃ³gicas sino en la de variedades diferenciables, pero esos son detalles tÃ©cnicos que en este momento carecen de importancia. Tan importante se considerÃ³ su trabajo que recibiÃ³ por Ã©l  la medalla Fields.  Y no es el Ãºnico topÃ³logo que ha recibido tal honor por resultados directamente relacionados con la conjetura de PoincarÃ©. 
 
-En la misma década otros matemáticos demostraron también la conjetura de Poincaré, pero con detalles técnicos ligeramente distintos.  El principal resultado se debe a Stallings y a Zeeman que probaron la conjetura en la categoría de variedades lineales a trozos
-
-
-
-
- En 1982 Freedman demostró un resultado más general que la conjetura de Poincaré en dimensión 4. Freedman clasificó todas las variedades  simplemente conexas de dimensión 4.  Si la variedad es homotópicamente equivalente a la esfera, se obtiene como  corolario  la conjetura de Poincaré.  Otro resultado relacionado con el teorema de Freedman es la sorprendente propiedad de que $\R^4$ admite un conjunto infinito de estructuras diferenciables que no son difeomorfas.  Este caso es la excepción,  pues todos los demás espacios euclídeos tienen una estructura diferenciable única.
+En la misma dÃ©cada otros matemÃ¡ticos demostraron tambiÃ©n la conjetura de PoincarÃ©, pero con detalles tÃ©cnicos ligeramente distintos.  El principal resultado se debe a Stallings y a Zeeman que probaron la conjetura en la categorÃ­a de variedades lineales a trozos
 
 
 
 
-
-
-
-
-
-
-
-
+ En 1982 Freedman demostrÃ³ un resultado mÃ¡s general que la conjetura de PoincarÃ© en dimensiÃ³n 4. Freedman clasificÃ³ todas las variedades  simplemente conexas de dimensiÃ³n 4.  Si la variedad es homotÃ³picamente equivalente a la esfera, se obtiene como  corolario  la conjetura de PoincarÃ©.  Otro resultado relacionado con el teorema de Freedman es la sorprendente propiedad de que $\R^4$ admite un conjunto infinito de estructuras diferenciables que no son difeomorfas.  Este caso es la excepciÃ³n,  pues todos los demÃ¡s espacios euclÃ­deos tienen una estructura diferenciable Ãºnica.
 
 
 \newpage
 
-\section*{Thurston y la geometría}
-\addcontentsline{toc}{section}{Thurston y la geometría}
+\section*{Thurston y la geometrÃ­a}
+\addcontentsline{toc}{section}{Thurston y la geometrÃ­a}
 
 
-En una variedad topológica no existe ningún concepto de distancia entre puntos. Esto es ciertamente lógico, pues la métrica no se conserva por aplicaciones continuas.  Dos variedades pueden ser topológicamente equivalentes y ser sin embargo muy diferentes desde el punto de vista geométrico.  Esto no quiere decir que la geometría no sea útil a la hora de estudiar la topología. Algunas veces resultados geométricos aportan nueva luz a la topología.  Un caso especialmente importante se da en las variedades bidimensionales compactas. Ya Koebe y Poincaré demostraron  el {\it teorema de uniformización}.
+En una variedad topolÃ³gica no existe ningÃºn concepto de distancia entre puntos. Esto es ciertamente lÃ³gico, pues la mÃ©trica no se conserva por aplicaciones continuas.  Dos variedades pueden ser topolÃ³gicamente equivalentes y ser sin embargo muy diferentes desde el punto de vista geomÃ©trico.  Esto no quiere decir que la geometrÃ­a no sea Ãºtil a la hora de estudiar la topologÃ­a. Algunas veces resultados geomÃ©tricos aportan nueva luz a la topologÃ­a.  Un caso especialmente importante se da en las variedades bidimensionales compactas. Ya Koebe y PoincarÃ© demostraron  el {\it teorema de uniformizaciÃ³n}.
 
 
 \smallskip
 
 {\bf Teorema.} \begin{it}
-En toda superficie compacta (orientable) existe una métrica (de Riemann) cuya curvatura  es $0$, $1$ ó $-1$.
+En toda superficie compacta (orientable) existe una mÃ©trica (de Riemann) cuya curvatura  es $0$, $1$ Ã³ $-1$.
 \end{it}
 
 \smallskip
 
-Este es un teorema de existencia, pero no de unicidad.  En algunas de las superficies existen en efecto varias métricas que hacen que la curvatura  sea constante.  De este modo no se puede asociar de modo canónico una única métrica a la variedad, pero si un conjunto de métricas especialmente adaptadas a dicha variedad.
+Este es un teorema de existencia, pero no de unicidad.  En algunas de las superficies existen en efecto varias mÃ©tricas que hacen que la curvatura  sea constante.  De este modo no se puede asociar de modo canÃ³nico una Ãºnica mÃ©trica a la variedad, pero si un conjunto de mÃ©tricas especialmente adaptadas a dicha variedad.
 
- La existencia de métricas de curvatura constante reduce el problema topológico de clasificación de superficies a un problema algebraico relacionado con la teoría de grupos. 
+ La existencia de mÃ©tricas de curvatura constante reduce el problema topolÃ³gico de clasificaciÃ³n de superficies a un problema algebraico relacionado con la teorÃ­a de grupos. 
  Para obtener todas las superficies debemos seguir varios pasos.
  
  \begin{enumerate}[\indent 1.- ]
  
- \item Primeramente debemos estudiar las variedades completas\footnote{Una variedad riemanniana es completa si cualquier geodésica se puede prolongar indefinidamente.} cuya curvatura sea $0$, $1$ ó $-1$ y que sean simplemente conexas.  En dimensión $2$ existen únicamente tres variedades de estas características: la esfera $S^2$ asociada a la curvatura $1$, el plano euclídeo $\R^2$ de curvatura nula y el plano hiperbólico $H^2$ de curvatura $-1$.
+ \item Primeramente debemos estudiar las variedades completas\footnote{Una variedad riemanniana es completa si cualquier geodÃ©sica se puede prolongar indefinidamente.} cuya curvatura sea $0$, $1$ Ã³ $-1$ y que sean simplemente conexas.  En dimensiÃ³n $2$ existen Ãºnicamente tres variedades de estas caracterÃ­sticas: la esfera $S^2$ asociada a la curvatura $1$, el plano euclÃ­deo $\R^2$ de curvatura nula y el plano hiperbÃ³lico $H^2$ de curvatura $-1$.
  
  
- \item Después estudiamos los grupos de isometrías de las tres variedades anteriores, comprobando que dan lugar a espacios homogéneos\footnote{Si $G$ es un grupo que actua en un espacio $X$ decimos que $X$ es un espacio homogeneo si dados dos puntos arbitrarios $x$, $x'$ existe un elemento del grupo $g$ tal que $g \cdot x = x'$}.
+ \item DespuÃ©s estudiamos los grupos de isometrÃ­as de las tres variedades anteriores, comprobando que dan lugar a espacios homogÃ©neos\footnote{Si $G$ es un grupo que actua en un espacio $X$ decimos que $X$ es un espacio homogeneo si dados dos puntos arbitrarios $x$, $x'$ existe un elemento del grupo $g$ tal que $g \cdot x = x'$}.
  
  
  \item Estudiamos los subgrupos de los grupos anteriores que cumplan que al hacer cociente por ellos se obtengan superficies compactas.  De este modo construimos todas las superficies posibles.
@@ -332,92 +316,78 @@ Este es un teorema de existencia, pero no de unicidad.  En algunas de las superf
  \end{enumerate}
  
 
+La idea de Thurston es la misma.  Utilizar la geometrÃ­a sobre la variedad para reducir el problema de clasificaciÃ³n a un problema meramente algebraico, que normalmente es mÃ¡s sencillo. Nuestro primer problema es definir que entendemos por una geometrÃ­a en tres dimensiones.
 
-
-
-
-La idea de Thurston es la misma.  Utilizar la geometría sobre la variedad para reducir el problema de clasificación a un problema meramente algebraico, que normalmente es más sencillo. Nuestro primer problema es definir que entendemos por una geometría en tres dimensiones.
-
-Siguiendo los pasos dados en dos dimensiones, debemos encontrar modelos de variedades tridimensionales que sean simplemente conexas, que sean completas y que sean homogeneas.  Como además estamos interesados en el caso compacto debemos ver cuales de esas geometrías dan lugar a variedades compactas al hacer cociente.  Thurston resolvió el problema (y recibió por ello una medalla Fields) y encontró que había exactamente 8 geometrías tridimensionales con cocientes compactos.  Tres de ellas son las asociadas a las curvatura constante positiva, negativa y nula. Las otras se obtienen básicamente al hacer productos y analizar métricas invariantes en grupos de Lie. Podemos dar entonces la 
+Siguiendo los pasos dados en dos dimensiones, debemos encontrar modelos de variedades tridimensionales que sean simplemente conexas, que sean completas y que sean homogeneas.  Como ademÃ¡s estamos interesados en el caso compacto debemos ver cuales de esas geometrÃ­as dan lugar a variedades compactas al hacer cociente.  Thurston resolviÃ³ el problema (y recibiÃ³ por ello una medalla Fields) y encontrÃ³ que habÃ­a exactamente 8 geometrÃ­as tridimensionales con cocientes compactos.  Tres de ellas son las asociadas a las curvatura constante positiva, negativa y nula. Las otras se obtienen bÃ¡sicamente al hacer productos y analizar mÃ©tricas invariantes en grupos de Lie. Podemos dar entonces la 
 
 
 \smallskip
 
-{\bf Definición.} \begin{it}
-Una {\it estructura geométrica} en una variedad es una métrica de Riemann completa y localmente homogenea (su recubridor universal es homogéneo).
+{\bf DefiniciÃ³n.} \begin{it}
+Una {\it estructura geomÃ©trica} en una variedad es una mÃ©trica de Riemann completa y localmente homogenea (su recubridor universal es homogÃ©neo).
 \end{it}
 
 \smallskip
 
 
-Existen variedades tridimensionales que no admiten ninguna estructura geométrica, debido a obtrucciones de tipo topológico.  Thurston sabía que era posible realizar cirugía con dichas variedades y descomponerlas en varias componentes.   Para ello debía hechar mano de resultados ya conocidos.  El primero de ellos de ellos se conoce como {\it descomposición prima} y afirma que toda variedad compacta se puede cortar a lo largo de esferas bidimensionales dando lugar a varias componentes.  Cada una de estas componentes no puede ser dividida del mismo modo y por lo tanto decimos que es {\it prima}. La descomposición obtenida de este modo es única salvo homeomorfismos.  Después a cada una de las componentes primas se le puede aplicar la {\it descomposición tórica}, donde los cortes esta vez se dan a lo largo de toros. Ya podemos enunciar la {\it conjetura de Thurston}:
+Existen variedades tridimensionales que no admiten ninguna estructura geomÃ©trica, debido a obtrucciones de tipo topolÃ³gico.  Thurston sabÃ­a que era posible realizar cirugÃ­a con dichas variedades y descomponerlas en varias componentes.   Para ello debÃ­a hechar mano de resultados ya conocidos.  El primero de ellos de ellos se conoce como {\it descomposiciÃ³n prima} y afirma que toda variedad compacta se puede cortar a lo largo de esferas bidimensionales dando lugar a varias componentes.  Cada una de estas componentes no puede ser dividida del mismo modo y por lo tanto decimos que es {\it prima}. La descomposiciÃ³n obtenida de este modo es Ãºnica salvo homeomorfismos.  DespuÃ©s a cada una de las componentes primas se le puede aplicar la {\it descomposiciÃ³n tÃ³rica}, donde los cortes esta vez se dan a lo largo de toros. Ya podemos enunciar la {\it conjetura de Thurston}:
 
 \begin{quote} \it
 
-Dada una variedad tridimensional compacta, después de efectuar la descomposición prima y la descomposición tórica, cada una de las componentes admite una estructura geométrica.
+Dada una variedad tridimensional compacta, despuÃ©s de efectuar la descomposiciÃ³n prima y la descomposiciÃ³n tÃ³rica, cada una de las componentes admite una estructura geomÃ©trica.
 
 \end{quote}
 
 
-Se ha demostrado la validez de la conjetura en algunos tipos de variedades, pero todavía no se sabe si es o no correcta.  Los trabajos de Perelman parecen indicar que si.
+Se ha demostrado la validez de la conjetura en algunos tipos de variedades, pero todavÃ­a no se sabe si es o no correcta.  Los trabajos de Perelman parecen indicar que si.
 
 
-Si la conjetura es cierta, el problema de clasificación de las variedades tridimensionales compactas se reduce al estudio y clasificación de las 8 geometrías.  De estas 8, 6 están perfectamente estudiadas y clasificadas.  En las otras 2 se conocen muchas cosas, pero el tema todavía no está cerrado. A proposito, las dos que peor se conocen no  son ninguna de las geometrías ``raras'' sino la esférica y la hiperbólica.
+Si la conjetura es cierta, el problema de clasificaciÃ³n de las variedades tridimensionales compactas se reduce al estudio y clasificaciÃ³n de las 8 geometrÃ­as.  De estas 8, 6 estÃ¡n perfectamente estudiadas y clasificadas.  En las otras 2 se conocen muchas cosas, pero el tema todavÃ­a no estÃ¡ cerrado. A proposito, las dos que peor se conocen no  son ninguna de las geometrÃ­as ``raras'' sino la esfÃ©rica y la hiperbÃ³lica.
 
 
-En particular, la conjetura de Poincaré, es un simple corolario de este resultado.  Si fuese  falsa, también sería falsa la conjetura de Thurston y la clasificación de las variedades tridimensionales sería más compleja de lo que creemos en este momento.
-
-
-
+En particular, la conjetura de PoincarÃ©, es un simple corolario de este resultado.  Si fuese  falsa, tambiÃ©n serÃ­a falsa la conjetura de Thurston y la clasificaciÃ³n de las variedades tridimensionales serÃ­a mÃ¡s compleja de lo que creemos en este momento.
 
 \newpage
 
 \section*{El flujo de Ricci}
 \addcontentsline{toc}{section}{El flujo de Ricci}
 
-El problema de la existencia de métricas con características especiales sobre las variedades siempre ha cautivado a los matemáticos. Ejemplos típicos son los teorema de uniformización y el problema de Yamabe.  En el mejor de los casos, si la métrica es única, se pueden realizar cálculos con dicha métrica y obtener información topológica.  El modo habitual de atacar este problema es proponer un problema variacional en el espacio de las métricas y los extremos de ese problema es probable que sean métricas con características espaciales.
+El problema de la existencia de mÃ©tricas con caracterÃ­sticas especiales sobre las variedades siempre ha cautivado a los matemÃ¡ticos. Ejemplos tÃ­picos son los teorema de uniformizaciÃ³n y el problema de Yamabe.  En el mejor de los casos, si la mÃ©trica es Ãºnica, se pueden realizar cÃ¡lculos con dicha mÃ©trica y obtener informaciÃ³n topolÃ³gica.  El modo habitual de atacar este problema es proponer un problema variacional en el espacio de las mÃ©tricas y los extremos de ese problema es probable que sean mÃ©tricas con caracterÃ­sticas espaciales.
 
-Sin embargo, en la década de los 80, Hamilton inventa un nuevo método, denominado {\it flujo de Ricci}. En realidad la idea no es nueva, pues el flujo de Ricci se estudia habitualmente en Relatividad General, pero aplicado a métricas semirriemannianas. En este caso se estudian ecuaciones diferenciales ordinarias (en dimensión infinita) que debe satisfacer la métrica. Se introduce  una métrica arbitraria en la variedad,  se hace evolucionar mediante la ecuación diferencial y se observa si converge a alguna solución.  En el conjunto de métricas de Riemann de una variedad se pueden proponer muchas ecuaciones diferenciales diferentes, pero el flujo de Ricci es la ecuación más sencilla.  Su expresión analítica es
+Sin embargo, en la dÃ©cada de los 80, Hamilton inventa un nuevo mÃ©todo, denominado {\it flujo de Ricci}. En realidad la idea no es nueva, pues el flujo de Ricci se estudia habitualmente en Relatividad General, pero aplicado a mÃ©tricas semirriemannianas. En este caso se estudian ecuaciones diferenciales ordinarias (en dimensiÃ³n infinita) que debe satisfacer la mÃ©trica. Se introduce  una mÃ©trica arbitraria en la variedad,  se hace evolucionar mediante la ecuaciÃ³n diferencial y se observa si converge a alguna soluciÃ³n.  En el conjunto de mÃ©tricas de Riemann de una variedad se pueden proponer muchas ecuaciones diferenciales diferentes, pero el flujo de Ricci es la ecuaciÃ³n mÃ¡s sencilla.  Su expresiÃ³n analÃ­tica es
 $$
 \frac{d g}{d t}=-2Ric_{g(t)} +\lambda(t) \cdot g
 $$
-donde $g$ denota la métrica riemanniana y $Ric$ el tensor de Ricci asociado. 
-Hamilton estudió el caso en que $\lambda$ es nulo y llegó a interesantes resultados.  El principal es que si el tensor de Ricci es definido positivo en todo punto, la métrica evoluciona, tras una renomalización, hacia una métrica de curvatura constante positiva.  En una variedad donde se pueda introducir una métrica cuyo tensor de Ricci sea definido positivo la conjetura de geometrización es cierta.  
+donde $g$ denota la mÃ©trica riemanniana y $Ric$ el tensor de Ricci asociado. 
+Hamilton estudiÃ³ el caso en que $\lambda$ es nulo y llegÃ³ a interesantes resultados.  El principal es que si el tensor de Ricci es definido positivo en todo punto, la mÃ©trica evoluciona, tras una renomalizaciÃ³n, hacia una mÃ©trica de curvatura constante positiva.  En una variedad donde se pueda introducir una mÃ©trica cuyo tensor de Ricci sea definido positivo la conjetura de geometrizaciÃ³n es cierta.  
 
-Pero al estudiar el flujo en el caso general se presentaban singularidades y no era posible demostrar la conjetura de geometrización.
+Pero al estudiar el flujo en el caso general se presentaban singularidades y no era posible demostrar la conjetura de geometrizaciÃ³n.
 
-
-
-
-
-
-
-
- Si la métrica varía de acuerdo al flujo de Ricci, la curvatura escalar evoluciona mediante la ecuación
+ Si la mÃ©trica varÃ­a de acuerdo al flujo de Ricci, la curvatura escalar evoluciona mediante la ecuaciÃ³n
 $$
 \frac{d R}{dt}= \Delta R + 2 \sum {Ric}^{ij}_{ij}
 $$
-que es una ecuación similar a la del calor pero no líneal. 
+que es una ecuaciÃ³n similar a la del calor pero no lÃ­neal. 
 
 \newpage
 
-\section*{Bibliografía}
-\addcontentsline{toc}{section}{Bibliografía}
+\section*{BibliografÃ­a}
+\addcontentsline{toc}{section}{BibliografÃ­a}
 
 
 
 \begin{itemize}\small
 
-\item John Milnor. {\it The Poincaré Conjecture One Hundred Years Later.}
+\item John Milnor. {\it The PoincarÃ© Conjecture One Hundred Years Later.}
 
  \verb|http://www.math.sunysb.edu/~jack/|
 
 \item Michael T. Anderson. {\it Geometrization of 3-Manifolds Via the Ricci Flow.} \verb|http://www.math.sunysb.edu/~anderson/|
 
 
-\item John Milnor. {\it Towars the Poincaré Conjecture and the Classification of \mbox{3-Manifolds.}} \verb|http://www.math.sunysb.edu/~jack/|
+\item John Milnor. {\it Towars the PoincarÃ© Conjecture and the Classification of \mbox{3-Manifolds.}} \verb|http://www.math.sunysb.edu/~jack/|
 
-\item Graham P. Collins. {\it Las Formas del Espacio.} Investigación y Ciencia, Octubre 2004.
+\item Graham P. Collins. {\it Las Formas del Espacio.} InvestigaciÃ³n y Ciencia, Octubre 2004.
 
 \item Michael T. Anderson. {\it Scalar Curvature and Geometrization Conjectures for 3-Manifolds.}\verb|http://www.math.sunysb.edu/~anderson/|
 
